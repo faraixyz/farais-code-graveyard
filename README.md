@@ -15,3 +15,5 @@ My GitHub was getting cluttered so I've decided to move my old projects into thi
 * [QLapse]()&ndash;A Chrome Extention that lets you collapse Quora answers. Pointless now.
 * [Retweet be Gone]()&ndash;A script that deletes old tweets and retweets. Also hides retweets from other users.
 * [Share Center of Battle Creek Website]() An attempted development of a website for the Share Center of Battle Creek. THey went with WordPress instead.
+
+F
