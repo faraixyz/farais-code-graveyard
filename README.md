@@ -17,3 +17,4 @@ My GitHub was getting cluttered so I've decided to move my old projects into thi
 * [Share Center of Battle Creek Website]() An attempted development of a website for the Share Center of Battle Creek. THey went with WordPress instead.
 
 F
+`
