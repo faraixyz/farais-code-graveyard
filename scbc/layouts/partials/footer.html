@@ -1,0 +1,22 @@
+<footer>
+    <div class="container">
+        <div class="text-center">
+            <img src="{{ .Site.Params.logo }}" alt="Site Logo" width="250">
+        </div>
+        <ul class="nav justify-content-center">
+            {{ range .Site.Menus.main }}
+                <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+            {{ end }}
+        </ul>
+        <address class="text-center">
+            <h2>Visit Us:</h2>
+            <p>
+                {{ .Site.Data.contact.address.street }} <br>
+                {{ .Site.Data.contact.address.city}}, {{ .Site.Data.contact.address.state }} <br>
+                Phone: <a href="tel:{{ .Site.Data.contact.phone }}">{{ .Site.Data.contact.phone }}</a> <br>
+                {{ .Site.Data.contact.hours }}
+            </p>
+        </address>
+        <a href="https://www.changethestory.org/"><img class="img text-center" src="/img/united-way-logo.jpg" alt="United Way of Battle Creek and Kalamazoo logo" width='150px'></a>
+    </div>
+</footer>

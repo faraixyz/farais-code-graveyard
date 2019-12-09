@@ -1,0 +1,15 @@
+{{ $options := (dict "targetPath" "css/main.css" "outputStyle" "expanded")}}
+{{ $style := resources.Get "stylesheets/main.scss" | resources.ToCSS $options}}
+<link rel="stylesheet" href="/css/bootstrap.css">
+<link rel="stylesheet" href="{{  $style.Permalink }}">
+{{ if .IsHome }}
+    <style>
+        .jumbotron {
+            background-image: url("{{ .Params.img.src }}");
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+    </style>
+{{ end }}

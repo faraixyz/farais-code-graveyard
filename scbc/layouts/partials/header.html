@@ -1,0 +1,17 @@
+<header id="site-header">
+        <nav class="navbar navbar-expand-md justify-content-center bg-light">
+            <a href="/" class="navbar-brand">
+                <img src="{{ .Site.Params.logo }}" alt="Site Logo" width="200">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"><span class="icon-text">Menu</span><img src="/img/icons/menu.svg" alt="Menu Icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    {{ range .Site.Menus.main}}
+                        <li class="nav-item"><a class="nav-link" href="{{ .URL }}">{{ .Name }}</a></li>
+                    {{ end }}
+                </ul>
+            </div>
+        </nav>
+</header>

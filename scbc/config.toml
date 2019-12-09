@@ -1,0 +1,32 @@
+baseURL = "https://sharecenterbc.netlify.com"
+languageCode = "en-us"
+title = "Share Center Battle Creek"
+canonifyurls = true
+staticDir = ["static", "favicon"]
+[params]
+    logo = "/img/logo.svg"
+[menu]
+    [[menu.main]]
+        name = "About"
+        url = "/about"
+        weight = 1
+    [[menu.main]]
+        name = "Home"
+        url = "/"
+        weight = 2
+    [[menu.main]]
+        name = "Support"
+        url = "/support"
+        weight = 3
+    [[menu.main]]
+        name = "Services"
+        url = "/services"
+        weight = 4
+    [[menu.main]]
+        name = "Contact"
+        url = "/contact"
+        weight = 5
+    [[menu.main]]
+        name = "News"
+        url = "/news"
+        weight = 6

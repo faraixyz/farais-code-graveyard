@@ -1,0 +1,22 @@
+{{ define "main" }}
+<div class="blog-posts">
+    <header>
+        <h1 class="text-center">{{ .Title }}</h1>
+    </header>
+    <ul class="blog-listing">
+        {{ range .Pages }}
+        <li>
+            <article>
+                <header>
+                    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+                    <time datetime="{{ .Date.Format "January 2, 2006" }}">{{ .Date.Format "January 2, 2006" }}</time>
+                </header>
+                <section>
+                    {{ .Content }}
+                </section>
+            </article>
+        </li>
+        {{ end }}
+    </ul>
+</div>
+{{ end }}

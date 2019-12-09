@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>QuickPush</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <script src="popup.js"></script>
+    <form class="search_bar" id="#form">
+        <input placeholder="Find a song" class="search_box" id="query" autocomplete="off" />
+        <button type="button" class="go" id="go">Search</button>
+    </form>
+    <audio src="" id="preview"></audio>
+    <div class="songs" id="songs">
+        <div class="song spotify temp"><img class="cover" src="http://www.isaacjewelers.com/img/cms/VersaceB.png">
+            <ul class="song_info">
+                <li class="song_name">This is an unessesarily long ass song title so that I can see </li>
+                <li class="song_artist">Artist A, Artist B, Artist C, Artist D, Artist E, Artist FFFFFFFFFFFFF</li>
+                <li class="provider"><a href="#" title="See on Spotify" target="_blank"><i class="fa fa-spotify"></i></a></li>
+            </ul>
+            <div class="actions">
+                <button type="button" class="btn addSong" id="$trackId"><i class="fa fa-plus"></i></button>
+                <button type="button" class="btn preview play" id="$previewURL"> <i class="fa fa-play"></i></button>
+            </div>
+        </div>
+        <div class="hello">
+            <h1>Hello There!</h1>
+            <h2>
+                Go on ahead and find a song that's on your mind!
+            </h2>
+        </div>
+    </div>
+</body>
+
+</html>

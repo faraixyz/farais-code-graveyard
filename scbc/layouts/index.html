@@ -1,0 +1,54 @@
+{{ define "main" }}
+    <div class="jumbotron jumbotron-fluid">
+        <section id="landing">
+            <div class="container text-center">
+                <h1><span id="f40">{{ .Title }}</span></h1>
+                <p class="lead"><span id="f40">{{ .Description }}</span></p>
+                <div id="ctas">
+                    {{ range .Params.cta }}
+                        <a href="{{ .url }}" class="btn btn-primary btn-lg">{{ .text }}</a>
+                    {{ end }}                    
+                </div>
+                </div>
+        </section>
+        </div>
+    </div>
+    <div class="container">
+        <section id="mission">
+            <div class="row">
+                <div class="col-lg-3 text-center">
+                    <h2>{{ .Params.mission.title}}</h2>
+                </div>
+                <div class="col-lg-9">
+                    <p>{{ .Params.mission.text }}</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="container">
+        <section id="services">
+            <h2 class="text-center">{{ .Params.serve.title }}</h2>
+            <div class="card-deck">
+                <div class="container">
+                    <div class="row">
+                        {{ range .Params.serve.services }}
+                        <div class="col-sm-6 col-lg-3 index-card">
+                            <div class="card">
+                                <div class="card-body">
+                                    {{ with .img }}
+                                        <img class="img-thumbnail" src="{{ . }}" alt="" >
+                                    {{ end }}
+                                    <h3 class="card-title h5">{{ .title }}</h3>
+                                    {{ with .description }}
+                                        <!--p class="card-text text-left">{{ . }}</p-->
+                                    {{ end }}
+                                </div>
+                            </div>
+                        </div>
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+{{ end }}

@@ -1,0 +1,44 @@
+image: node:10.15
+
+variables:
+  GIT_STRATEGY: fetch
+
+build:
+  stage: build
+  before_script:
+    - wget https://github.com/gohugoio/hugo/releases/download/v0.53/hugo_extended_0.53_Linux-64bit.deb
+    - dpkg -i ./hugo_extended_0.53_Linux-64bit.deb
+    - apt-get install -f
+  script:
+    - hugo --minify
+  artifacts:
+    paths:
+      - public
+
+deploy_test:
+  stage: deploy
+  dependencies:
+    - build
+  variables:
+    NETLIFY_SITE_ID: c45fb2ec-a2be-42d6-9de2-263549e1e463
+  before_script:
+    - npm install -g netlify-cli
+    - netlify --telemetry-disable
+  script:
+    - netlify deploy --dir=public --prod
+  only:
+    - test
+
+deploy_live:
+  stage: deploy
+  dependencies:
+    - build
+  variables:
+    NETLIFY_SITE_ID: c45fb2ec-a2be-42d6-9de2-263549e1e463
+  before_script:
+    - npm install -g netlify-cli
+    - netlify --telemetry-disable
+  script:
+    - netlify deploy --dir=public --prod
+  only:
+    - master

@@ -1,0 +1,16 @@
+{
+    "manifest_version": 2,
+    "name": "QuickPush (Beta)",
+    "version": "0.501",
+    "minimum_chrome_version":"20",
+    "icons":{
+        "16":"icons/icon16.png",
+        "48":"icons/icon48.png",
+        "128":"icons/icon128.png"
+    },    
+    "description": "Let's you quickly find songs and see them on Spotify",
+    "browser_action":{
+        "default_title": "QuickPush",
+        "default_popup": "popup.html"
+    }
+}

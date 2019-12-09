@@ -1,0 +1,53 @@
+.navbar-collapse li{
+    padding-top: 2.25rem;
+    font-size: 1.5rem;
+}
+.collapse.show, .collapsing{
+
+    max-width: 23.71rem;
+    margin: 1rem;
+    background-color: black;
+    
+    & ul {
+        border: 1px black solid;
+    }
+    & li {
+        padding: unset;
+
+        &:before {
+            display: none;
+        }
+        & a {
+            margin-left: 0.5rem;
+        }
+        border-bottom: 1px white solid;
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+}
+
+
+#navbarSupportedContent {
+    flex-grow: unset;
+}
+
+#site-header {
+    width: 100%;
+
+    a {
+        text-decoration: underline;
+    }
+
+    nav {
+        padding: 0.2rem, 1rem;
+    }
+}
+
+.navbar-toggler-icon{
+    display: inline;
+
+    & img {
+        top: 10rem;
+    }
+}

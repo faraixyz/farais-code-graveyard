@@ -1,0 +1,16 @@
+@import "partials/default";
+@import "partials/site-header";
+@import "partials/index";
+@import "partials/footer";
+@import "partials/contact";
+@import "partials/listing";
+
+html, body {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+}
+
+article {
+    padding: 2rem !important;
+}

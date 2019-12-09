@@ -1,0 +1,114 @@
+<!--
+The MIT License (MIT)
+Copyright (c) 2014 Leap Motion Inc
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+//-->
+
+<html>
+  <head>
+    <title>Uncommon RPS</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r75/three.js"></script>
+    <script src="https://js.leapmotion.com/leap-0.6.4.min.js"></script>
+    <script src="https://js.leapmotion.com/leap-plugins-0.1.11.js"></script>
+    <script src="https://js.leapmotion.com/leap.rigged-hand-0.1.7.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+    <script src="startcount.js"></script>
+    <script src="id.js"></script>
+    <script>
+    $(document).ready(function() {
+        $(document).bind('keydown',function(e){
+           if(e.keyCode == 32) {
+              startCount();
+           }
+        });
+    });
+</script>
+    
+    <style class="codepen">
+      body{
+        background-image: url("RPS Background.png");
+        background-size: auto 100vh;
+        background-attachment: fixed;
+        background-position: center; 
+        background-repeat: no-repeat;
+        font-family     : 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+      }
+      #ai {
+        left            : 50%;
+        position        : absolute;
+        text-align      : center;
+        position        : absolute;
+        top             : 0%;
+        color           : #005d98;
+        font-size       : 25px;
+        transform       : translate(-50%,0%);
+      }
+      #handshape {
+        float           : left;
+        color           : #005d98;
+        font-size       : 50px;
+      }
+      #vs{
+        font-weight     : bold;
+        font-size       : 50px;
+        color           : red;
+        left            : 50%;
+        position        : absolute;
+        top             : 50%;
+        transform       : translate(-50%,-50%);
+      }
+      .aiaction{
+        font-weight     : bold;
+        font-size       : 50px;
+        color           : white;
+        left            : 75%;
+        position        : absolute;
+        top             : 50%;
+        transform       : translate(-50%,-50%);
+      }
+      .resultimg{
+        font-weight     : bold;
+        font-size       : 50px;
+        color           : white;
+        left            : 50%;
+        position        : absolute;
+        bottom:         : 0%;
+        transform       : translate(-50%,-100%);
+      }
+      canvas {
+        background: transparent;
+      }
+    </style>
+
+  </head>
+  <body>
+    <div id="ai"></div>
+    <div id="handshape"></div>
+    <div id="vs">VS</div>
+    <div id="ai-guess">
+      <img class="aiaction" id="rock" src="rock.png" alt="Rock" style="display: none;"/>
+      <img class="aiaction" id="scissors" src="scissors.png" alt="Scissors" style="display: none;"/>
+      <img class="aiaction "id="paper" src="paper.png" alt="Paper" style="display: none;"/>
+      <div></div>
+    </div>
+  </body>
+<script src="index.js"></script>
+</html>

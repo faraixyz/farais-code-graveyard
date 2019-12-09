@@ -1,0 +1,27 @@
+{% extends "layouts/base.html" %}
+{% block content %}
+    <form action="{{url_for('log_weight')}}" method="POST">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul class="flashes alert alert-danger">
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+        <label for="date">Date</label>
+        <input type="text" name="date" value="{{ date }}" size="12" maxlength="12">
+        <label for="weight">Weight(lbs)</label>
+        <input name="weight" type="number" step="0.1" style="width: 4em">  
+        <label for="password">Password</label>
+        <input type="password" name="password"> 
+        <button type="submit" name="submit" value="submit">Add Weight</button>
+    </form>
+    <h3>Start Weight: {{ start_weight }}lbs</h3>
+    <h3>Current Weight: {{ current_weight }}lbs</h3>
+    <h3>Weight Lost: {{ lost }}lbs</h3>
+    <figure>
+        <embed src="{{url_for('line_route', time_range='past-30-days')}}" type="image/svg+xml" />
+    </figure>
+{% endblock %}

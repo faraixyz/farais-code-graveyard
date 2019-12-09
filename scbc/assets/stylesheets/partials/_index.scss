@@ -1,0 +1,47 @@
+.jumbotron {
+    padding-top: 0;
+
+    h1 span {
+        background-color: blue;
+    }
+}
+
+#landing {
+    padding-top: 3rem;
+
+    h1 {
+        font-size: 2.5rem;
+        font-weight: 500;
+        line-height: 4rem;
+    }
+}
+
+.lead {
+    max-width: 50rem;
+    margin: auto;
+}
+
+#ctas {
+    margin-top: 1.5rem;
+}
+
+#services {
+    padding-bottom: 2rem;
+}
+
+#f40 {
+    background-color: rgb(0, 162, 255);
+    padding: 0.2rem;
+}
+.lead {
+    #f40 {
+        font-size: 1rem;
+        line-height: 1.75rem;
+        font-weight: 500;
+        letter-spacing: 1px;
+    }
+}
+
+.index-card {
+    padding: 0 0 1rem ;
+}

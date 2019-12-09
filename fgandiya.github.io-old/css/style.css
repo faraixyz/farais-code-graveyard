@@ -1,0 +1,77 @@
+
+body{
+  overflow-x:hidden;
+}
+.top{
+  padding-top:2em;
+  margin-bottom:0px;
+  text-align:center;
+  background-repeat:no-repeat;
+  background-color: #0971B2;
+  color:white;
+  
+
+}
+.about a{
+  color:#00FF75;
+}
+.about a:visited{
+  color:lime;
+}
+
+.about{
+  padding-top:1em;
+  padding-bottom: 1em;
+  padding-left: 1em;
+  margin:0 auto;
+  text-align:center;
+  background-color:#14B6CC;
+
+  color:#eeeeee;
+  line-height: 1.6em;
+}
+#temp{
+  display:none;
+}
+.projects{
+  text-align:center;
+  background-image:url("https://images.unsplash.com/photo-1417733403748-83bbc7c05140?crop=entropy&fit=crop&fm=jpg&h=950&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925");
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+.thing{
+  text-align:left;
+}
+.footer{
+  background-color:rgb(32,32,32);
+  color:white;
+  padding-top:15px;
+}
+@media (max-width:768px){
+  .thumbnail{
+    min-height:12em;
+  }
+}
+@media(min-width:768px){
+  .thumbnail{
+    min-height:15.2em;
+    height:18em;
+  }
+}
+@media (min-width:992px){
+  .thumbnail{
+    min-height:25.3em;
+  }
+}
+@media (min-width:1042px){
+  .thumbnail{
+    min-height:17em;
+    height:22.3em;
+  }
+}
+@media(min-width:1217px){
+.thumbnail{
+  min-height:14em;
+  height:18.1em;
+} 
+}
