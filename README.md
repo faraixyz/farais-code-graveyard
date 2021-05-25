@@ -1,7 +1,7 @@
 # Farai's Classic Projects
 The graveyard for all of my old programming projects.
 
-My GitHub was getting cluttered with noise so I've decided to move my old projects into this repo in case someone wants to learn from it.
+My GitHub was getting cluttered with noise so I've decided to move my old projects into this repo in case someone wants to learn from it. Doing this I realized that it wouldn't keep the git history of each project, meaning that I lost how I made all of this. Oh well 🤷🏾‍♂️.
 
 ## Projects
 * [QuickPush](https://github.com/fgandiya/farais-classic-projects/tree/master/QuickPush)&ndash;A Chrome Extension that adds music to Spotify
